@@ -8,6 +8,7 @@ import {
   Layers,
   Mail,
   Menu,
+  Network,
   Package,
   X,
 } from "lucide-react";
@@ -32,6 +33,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
 
   const links = [
     { href: "#home", label: dict.nav.home, icon: Home },
+    { href: "#ecosystem", label: dict.nav.ecosystem, icon: Network },
     { href: "#products", label: dict.nav.products, icon: Package },
     { href: "#about", label: dict.nav.about, icon: Building2 },
     { href: "#services", label: dict.nav.services, icon: Layers },
@@ -105,7 +107,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
                   href={link.href}
                   data-active={active === link.href}
                   className={cn(
-                    "nav-link focus-ring group inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-gold/5 hover:text-foreground",
+                    "nav-link focus-ring group inline-flex items-center gap-1 rounded-xl px-2 py-2 text-[0.8rem] font-medium text-muted transition-colors hover:bg-gold/5 hover:text-foreground xl:gap-1.5 xl:px-2.5 xl:text-sm",
                     active === link.href && "text-foreground",
                   )}
                 >

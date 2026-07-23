@@ -4,12 +4,13 @@ const sk: Dictionary = {
   meta: {
     title: "ENDEVIS — Inteligentný podnikový softvér",
     description:
-      "ENDEVIS vyvíja SaaS aplikácie poháňané umelou inteligenciou na spracovanie dokumentov, automatizáciu workflow a digitalizáciu podnikania.",
+      "ENDEVIS je AI softvérová spoločnosť a vydavateľ podnikových aplikácií — FlowStore, PaperFlow, FeedFlow a EventFlow.",
     keywords:
-      "ENDEVIS, AI softvér, SaaS, správa dokumentov, automatizácia workflow, PaperFlow, EventFlow, FeedFlow",
+      "ENDEVIS, FlowStore, AI softvér, SaaS, PaperFlow, FeedFlow, EventFlow, marketplace",
   },
   nav: {
     home: "Domov",
+    ecosystem: "Ekosystém",
     products: "Produkty",
     about: "O spoločnosti",
     services: "Služby",
@@ -39,48 +40,82 @@ const sk: Dictionary = {
       workflow: "Inteligentné workflow",
     },
   },
-  products: {
-    eyebrow: "Produkty",
-    title: "Softvér, ktorý rastie s vaším podnikaním",
+  ecosystem: {
+    eyebrow: "Ekosystém",
+    title: "Jeden vydavateľ. Rastúci vesmír AI aplikácií.",
     subtitle:
-      "Rastúce portfólio inteligentných platforiem — navrhnutých pre prehľadnosť, automatizáciu a podnikovú spoľahlivosť.",
+      "ENDEVIS nie je jeden produkt — sme spoločnosť za rastúcim portfóliom inteligentného podnikového softvéru, zjednoteným cez FlowStore.",
+    publisher: "Vydavateľ softvéru",
+    roles: [
+      "AI softvérová spoločnosť",
+      "Vydavateľ softvéru",
+      "Poskytovateľ cloudovej platformy",
+      "Tvorca AI podnikových aplikácií",
+    ],
+    gatewayTitle: "FlowStore — vstupná brána",
+    gatewayDesc:
+      "Objavujte, porovnávajte, predplácajte a spravujte všetky aplikácie ENDEVIS z jedného marketplace — licencie, organizácie, fakturácia, desktopové verzie aj budúce pluginy.",
+    appsTitle: "Publikované aplikácie",
+    appsDesc:
+      "Každá aplikácia rieši konkrétny obchodný problém a je navrhnutá pre napojenie do ekosystému FlowStore.",
+    futureTitle: "Pripravené na neobmedzený rast",
+    futureDesc:
+      "Nové Flow aplikácie sa pripájajú do rovnakej architektúry — automaticky dostupné vo FlowStore.",
+  },
+  products: {
+    eyebrow: "Aplikácie",
+    title: "Softvérové portfólio ENDEVIS",
+    subtitle:
+      "Prémiové AI podnikové aplikácie vydávané spoločnosťou ENDEVIS — dostupné a spravovateľné cez FlowStore.",
     comingSoon: "Už čoskoro",
     comingSoonDesc:
-      "Nové inteligentné aplikácie sú vo vývoji. Naša architektúra je pripravená na nepretržité rozširovanie produktov.",
+      "SiteFlow, FoodFlow, CRMFlow, HRFlow, StockFlow, ProjectFlow, FleetFlow, FinanceFlow, AI Studio — a ďalšie. Každá budúca aplikácia je pripravená pre FlowStore.",
     learnMore: "Zistiť viac",
-    visit: "Otvoriť produkt",
+    visit: "Otvoriť aplikáciu",
+    marketplaceBadge: "Marketplace",
     items: {
-            paperflow: {
+      flowstore: {
+        title: "FlowStore",
+        tagline: "Marketplace pre AI podnikové aplikácie",
+        description:
+          "Centrálna brána do ekosystému ENDEVIS — objavujte aplikácie, porovnávajte možnosti, nakupujte predplatné a spravujte licencie, organizácie aj fakturáciu.",
+        features: [
+          "Objavovanie a porovnanie aplikácií",
+          "Predplatné, licencie a fakturácia",
+          "Organizácie, aktualizácie a pluginy",
+        ],
+      },
+      paperflow: {
         title: "PaperFlow",
         tagline: "AI správa dokumentov",
         description:
-          "Platforma na správu dokumentov s AI, ktorá digitalizuje, klasifikuje a ťaží informácie z firemných dokumentov vo veľkom meradle.",
+          "AI správa dokumentov pre OCR, faktúry, zmluvy, analýzu PDF a bezpečný digitálny archív.",
         features: [
-          "Inteligentný príjem dokumentov",
-          "Automatická klasifikácia a extrakcia",
-          "Bezpečné podnikové workflow",
+          "Spracovanie dokumentov a OCR",
+          "Faktúry a zmluvy",
+          "Analýza PDF a digitálny archív",
+        ],
+      },
+      feedflow: {
+        title: "FeedFlow",
+        tagline: "AI čistenie produktových dát",
+        description:
+          "AI čistenie produktových dát z katalógov dodávateľov — mapovanie CSV, Excel, XML a automatizácia e-commerce.",
+        features: [
+          "Spracovanie katalógov dodávateľov",
+          "Mapovanie CSV · Excel · XML",
+          "Automatizácia e-commerce dát",
         ],
       },
       eventflow: {
         title: "EventFlow",
         tagline: "AI plánovanie udalostí",
         description:
-          "Moderná platforma pre udalosti a registrácie s AI zabezpečujúca plynulý zážitok účastníkov — od pozvánky po check-in.",
+          "AI plánovanie udalostí pre menu, catering, rozpočty, rezervácie a automatizáciu eventov.",
         features: [
-          "Komplexná správa udalostí",
-          "Inteligentné registračné toky",
-          "Analytika v reálnom čase",
-        ],
-      },
-      feedflow: {
-        title: "FeedFlow",
-        tagline: "AI spracovanie produktových dát",
-        description:
-          "Platforma na AI spracovanie produktových dát, ktorá zjednodušuje obohacovanie, kurátorstvo a distribúciu naprieč kanálmi.",
-        features: [
-          "Obohacovanie dát s podporou AI",
-          "Produktové feedy na viacerých kanáloch",
-          "Automatizácia katalógových workflow",
+          "Správa menu a cateringu",
+          "Rozpočty a rezervácie",
+          "Automatizácia eventových workflow",
         ],
       },
     },
@@ -180,13 +215,13 @@ const sk: Dictionary = {
     eyebrow: "O spoločnosti",
     title: "Inteligentný softvér pre moderné organizácie",
     paragraph1:
-      "ENDEVIS vyvíja moderné softvérové riešenia zamerané na automatizáciu, umelú inteligenciu a digitálnu transformáciu.",
+      "ENDEVIS Sp. z o.o. je AI softvérová spoločnosť a vydavateľ inteligentných podnikových aplikácií — nie sme jeden produkt, ale spoločnosť za rastúcim ekosystémom.",
     paragraph2:
-      "Naším cieľom je zjednodušiť zložité obchodné procesy prostredníctvom inteligentných technológií — dodávať platformy, ktoré sú elegantné, spoľahlivé a pripravené na rast.",
+      "Vytvárame a vydávame platformy ako FlowStore, PaperFlow, FeedFlow a EventFlow s cieľom zjednodušiť zložité obchodné procesy prostredníctvom inteligentných technológií.",
     companyLabel: "Spoločnosť",
     registeredOffice: "Sídlo",
     stats: {
-      products: { value: "3+", label: "Aktívne platformy" },
+      products: { value: "4+", label: "Aktívne platformy" },
       focus: { value: "AI", label: "Kľúčová kompetencia" },
       markets: { value: "EU", label: "Trhové zameranie" },
     },

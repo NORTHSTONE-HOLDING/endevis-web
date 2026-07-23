@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
+import { Ecosystem } from "@/components/sections/Ecosystem";
 import { Hero } from "@/components/sections/Hero";
 import { Products } from "@/components/sections/Products";
 import { Services } from "@/components/sections/Services";
@@ -21,6 +22,7 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <Hero dict={dict} />
+      <Ecosystem dict={dict} />
       <Products dict={dict} />
       <About dict={dict} />
       <Services dict={dict} />

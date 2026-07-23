@@ -3,7 +3,8 @@ import { Mail } from "lucide-react";
 import type { Locale } from "@/lib/i18n/config";
 import { localeLabels, locales } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
-import { company, products } from "@/lib/company";
+import { company } from "@/lib/company";
+import { products } from "@/lib/ecosystem";
 import { Logo } from "@/components/ui/Logo";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/SocialIcons";
 
@@ -16,6 +17,7 @@ export function Footer({ locale, dict }: FooterProps) {
   const year = new Date().getFullYear();
 
   const quickLinks = [
+    { href: "#ecosystem", label: dict.nav.ecosystem },
     { href: "#products", label: dict.nav.products },
     { href: "#about", label: dict.nav.about },
     { href: "#services", label: dict.nav.services },

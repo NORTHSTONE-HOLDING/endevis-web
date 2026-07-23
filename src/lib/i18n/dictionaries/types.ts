@@ -1,3 +1,12 @@
+import type { ProductId } from "@/lib/ecosystem";
+
+export type ProductCopy = {
+  title: string;
+  tagline: string;
+  description: string;
+  features: string[];
+};
+
 export type Dictionary = {
   meta: {
     title: string;
@@ -6,6 +15,7 @@ export type Dictionary = {
   };
   nav: {
     home: string;
+    ecosystem: string;
     products: string;
     about: string;
     services: string;
@@ -34,6 +44,19 @@ export type Dictionary = {
       workflow: string;
     };
   };
+  ecosystem: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    publisher: string;
+    roles: string[];
+    gatewayTitle: string;
+    gatewayDesc: string;
+    appsTitle: string;
+    appsDesc: string;
+    futureTitle: string;
+    futureDesc: string;
+  };
   products: {
     eyebrow: string;
     title: string;
@@ -42,26 +65,8 @@ export type Dictionary = {
     comingSoonDesc: string;
     learnMore: string;
     visit: string;
-    items: {
-      paperflow: {
-        title: string;
-        tagline: string;
-        description: string;
-        features: string[];
-      };
-      eventflow: {
-        title: string;
-        tagline: string;
-        description: string;
-        features: string[];
-      };
-      feedflow: {
-        title: string;
-        tagline: string;
-        description: string;
-        features: string[];
-      };
-    };
+    marketplaceBadge: string;
+    items: Record<ProductId, ProductCopy>;
   };
   services: {
     eyebrow: string;

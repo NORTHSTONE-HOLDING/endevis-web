@@ -1,12 +1,16 @@
 /**
  * Company registration details.
  * Update VAT EU placeholder with the official number when available.
+ *
+ * ENDEVIS is the company and software publisher — not a product.
+ * Application catalog lives in `./ecosystem`.
  */
 export const company = {
   name: "ENDEVIS Sp. z o.o.",
   shortName: "ENDEVIS",
   initials: "E",
   tagline: "Intelligent Business Software",
+  role: "AI Software Company · Software Publisher",
   website: "https://endevis.cz",
   email: "info@endevis.cz",
   phone: "+420 720 833 082",
@@ -37,23 +41,5 @@ export const company = {
     "https://www.openstreetmap.org/export/embed.html?bbox=14.38%2C50.26%2C14.48%2C50.32&layer=mapnik&marker=50.29%2C14.43",
 } as const;
 
-export const products = [
-  {
-    id: "paperflow",
-    name: "PaperFlow",
-    href: "https://paperflow.cz",
-    icon: "FileText",
-  },
-  {
-    id: "eventflow",
-    name: "EventFlow",
-    href: "https://eventflow.cz",
-    icon: "Calendar",
-  },
-  {
-    id: "feedflow",
-    name: "FeedFlow",
-    href: "https://feedflow.cz",
-    icon: "Rss",
-  },
-] as const;
+/** @deprecated Prefer importing from `@/lib/ecosystem` */
+export { products } from "./ecosystem";

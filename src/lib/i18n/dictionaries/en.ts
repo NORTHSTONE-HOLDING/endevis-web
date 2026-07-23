@@ -4,12 +4,13 @@ const en: Dictionary = {
   meta: {
     title: "ENDEVIS — Intelligent Business Software",
     description:
-      "ENDEVIS develops AI-powered SaaS applications for document processing, workflow automation, and business digitalization.",
+      "ENDEVIS is an AI software company and publisher of business applications — FlowStore, PaperFlow, FeedFlow, and EventFlow.",
     keywords:
-      "ENDEVIS, AI software, SaaS, document management, workflow automation, PaperFlow, EventFlow, FeedFlow",
+      "ENDEVIS, FlowStore, AI software, SaaS, PaperFlow, FeedFlow, EventFlow, marketplace",
   },
   nav: {
     home: "Home",
+    ecosystem: "Ecosystem",
     products: "Products",
     about: "About Company",
     services: "Services",
@@ -39,48 +40,82 @@ const en: Dictionary = {
       workflow: "Intelligent Workflows",
     },
   },
-  products: {
-    eyebrow: "Products",
-    title: "Software that scales with your business",
+  ecosystem: {
+    eyebrow: "Ecosystem",
+    title: "One publisher. An expanding universe of AI applications.",
     subtitle:
-      "A growing portfolio of intelligent platforms — designed for clarity, automation, and enterprise reliability.",
+      "ENDEVIS is not a single product — we are the company behind a growing portfolio of intelligent business software, unified through FlowStore.",
+    publisher: "Software Publisher",
+    roles: [
+      "AI Software Company",
+      "Software Publisher",
+      "Cloud Platform Provider",
+      "Creator of AI Business Applications",
+    ],
+    gatewayTitle: "FlowStore — the gateway",
+    gatewayDesc:
+      "Discover, compare, subscribe, and manage every ENDEVIS application from one marketplace — licenses, organizations, billing, desktop downloads, and future plugins.",
+    appsTitle: "Published applications",
+    appsDesc:
+      "Each application solves a focused business problem and is designed to plug into the FlowStore ecosystem.",
+    futureTitle: "Built for unlimited growth",
+    futureDesc:
+      "New Flow applications join the same architecture — automatically discoverable in FlowStore.",
+  },
+  products: {
+    eyebrow: "Applications",
+    title: "The ENDEVIS software portfolio",
+    subtitle:
+      "Premium AI business applications published by ENDEVIS — discoverable and manageable through FlowStore.",
     comingSoon: "Coming Soon",
     comingSoonDesc:
-      "New intelligent applications are in development. Our architecture is built for continuous product expansion.",
+      "SiteFlow, FoodFlow, CRMFlow, HRFlow, StockFlow, ProjectFlow, FleetFlow, FinanceFlow, AI Studio — and more. Every future app is FlowStore-ready.",
     learnMore: "Learn more",
-    visit: "Open product",
+    visit: "Open application",
+    marketplaceBadge: "Marketplace",
     items: {
-            paperflow: {
+      flowstore: {
+        title: "FlowStore",
+        tagline: "Marketplace for AI Business Applications",
+        description:
+          "The central gateway into the ENDEVIS ecosystem — discover apps, compare capabilities, purchase subscriptions, manage licenses, organizations, and billing.",
+        features: [
+          "Discover & compare applications",
+          "Subscriptions, licenses & billing",
+          "Organizations, updates & plugins",
+        ],
+      },
+      paperflow: {
         title: "PaperFlow",
         tagline: "AI Document Management",
         description:
-          "AI document management platform that digitizes, classifies, and extracts insight from business documents at scale.",
+          "AI document management for OCR, invoices, contracts, PDF analysis, and a secure digital archive.",
         features: [
-          "Intelligent document ingestion",
-          "Automated classification & extraction",
-          "Secure enterprise workflows",
+          "Document processing & OCR",
+          "Invoices & contracts",
+          "PDF analysis & digital archive",
+        ],
+      },
+      feedflow: {
+        title: "FeedFlow",
+        tagline: "AI Product Data Cleaning",
+        description:
+          "AI product data cleaning for supplier catalogs — CSV, Excel, XML mapping and e-commerce automation.",
+        features: [
+          "Supplier catalog processing",
+          "CSV · Excel · XML mapping",
+          "E-commerce data automation",
         ],
       },
       eventflow: {
         title: "EventFlow",
         tagline: "AI Event Planning",
         description:
-          "Modern AI-powered event and registration platform for seamless attendee experiences, from invitation to check-in.",
+          "AI event planning for menus, catering, budgets, reservations, and end-to-end event automation.",
         features: [
-          "End-to-end event management",
-          "Smart registration flows",
-          "Real-time analytics",
-        ],
-      },
-      feedflow: {
-        title: "FeedFlow",
-        tagline: "AI Product Data Processing",
-        description:
-          "AI product data processing platform that streamlines enrichment, curation, and distribution across channels.",
-        features: [
-          "AI-assisted data enrichment",
-          "Multi-channel product feeds",
-          "Automated catalog workflows",
+          "Menu & catering management",
+          "Budget planning & reservations",
+          "Event workflow automation",
         ],
       },
     },
@@ -180,13 +215,13 @@ const en: Dictionary = {
     eyebrow: "About Company",
     title: "Intelligent software for modern organizations",
     paragraph1:
-      "ENDEVIS develops modern software solutions focused on automation, artificial intelligence and digital transformation.",
+      "ENDEVIS Sp. z o.o. is an AI software company and publisher of intelligent business applications — not a single product, but the company behind an expanding ecosystem.",
     paragraph2:
-      "Our goal is to simplify complex business processes through intelligent technologies — delivering platforms that are elegant, reliable, and ready for scale.",
+      "We build and publish platforms such as FlowStore, PaperFlow, FeedFlow, and EventFlow, with a goal to simplify complex business processes through intelligent technologies.",
     companyLabel: "Company",
     registeredOffice: "Registered Office",
     stats: {
-      products: { value: "3+", label: "Live platforms" },
+      products: { value: "4+", label: "Live platforms" },
       focus: { value: "AI", label: "Core capability" },
       markets: { value: "EU", label: "Market focus" },
     },
