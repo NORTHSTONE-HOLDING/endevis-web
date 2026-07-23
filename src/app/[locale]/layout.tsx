@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { LocaleHtmlLang } from "@/components/providers/LocaleHtmlLang";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { MouseGlow } from "@/components/ui/MouseGlow";
@@ -82,10 +83,19 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <ThemeProvider>
-      <div lang={locale} className="relative flex min-h-screen flex-col">
+      <LocaleHtmlLang locale={locale} />
+      <div className="relative flex min-h-screen flex-col">
+        <a
+          href="#main-content"
+          className="focus-ring sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-gold focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-graphite"
+        >
+          Skip to content
+        </a>
         <MouseGlow />
         <Navbar locale={locale} dict={dict} />
-        <main className="relative z-10 flex-1">{children}</main>
+        <main id="main-content" className="relative z-10 flex-1">
+          {children}
+        </main>
         <Footer locale={locale} dict={dict} />
         <script
           type="application/ld+json"
