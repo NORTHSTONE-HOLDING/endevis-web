@@ -32,6 +32,12 @@ const en: Dictionary = {
       automation: "Process Automation",
       cloud: "Cloud-Ready Platforms",
     },
+    stats: {
+      ai: "Artificial Intelligence",
+      cloud: "Cloud Platforms",
+      automation: "Business Automation",
+      workflow: "Intelligent Workflows",
+    },
   },
   products: {
     eyebrow: "Products",
@@ -42,9 +48,11 @@ const en: Dictionary = {
     comingSoonDesc:
       "New intelligent applications are in development. Our architecture is built for continuous product expansion.",
     learnMore: "Learn more",
+    visit: "Open product",
     items: {
-      paperflow: {
+            paperflow: {
         title: "PaperFlow",
+        tagline: "AI Document Management",
         description:
           "AI document management platform that digitizes, classifies, and extracts insight from business documents at scale.",
         features: [
@@ -55,8 +63,9 @@ const en: Dictionary = {
       },
       eventflow: {
         title: "EventFlow",
+        tagline: "AI Event Planning",
         description:
-          "Modern event and registration platform for seamless attendee experiences, from invitation to check-in.",
+          "Modern AI-powered event and registration platform for seamless attendee experiences, from invitation to check-in.",
         features: [
           "End-to-end event management",
           "Smart registration flows",
@@ -65,12 +74,13 @@ const en: Dictionary = {
       },
       feedflow: {
         title: "FeedFlow",
+        tagline: "AI Product Data Processing",
         description:
-          "AI content and publishing platform that streamlines creation, curation, and distribution across channels.",
+          "AI product data processing platform that streamlines enrichment, curation, and distribution across channels.",
         features: [
-          "AI-assisted content generation",
-          "Multi-channel publishing",
-          "Editorial workflow automation",
+          "AI-assisted data enrichment",
+          "Multi-channel product feeds",
+          "Automated catalog workflows",
         ],
       },
     },
@@ -173,6 +183,8 @@ const en: Dictionary = {
       "ENDEVIS develops modern software solutions focused on automation, artificial intelligence and digital transformation.",
     paragraph2:
       "Our goal is to simplify complex business processes through intelligent technologies — delivering platforms that are elegant, reliable, and ready for scale.",
+    companyLabel: "Company",
+    registeredOffice: "Registered Office",
     stats: {
       products: { value: "3+", label: "Live platforms" },
       focus: { value: "AI", label: "Core capability" },
@@ -192,11 +204,13 @@ const en: Dictionary = {
     registeredOffice: "Registered Office",
     sendMessage: "Send a message",
     getInTouch: "Get in touch",
+    mapLabel: "Location",
   },
   footer: {
     tagline: "Building intelligent business software for Europe.",
     quickLinks: "Quick links",
     products: "Products",
+    services: "Services",
     languages: "Languages",
     contact: "Contact",
     rights: "All rights reserved.",

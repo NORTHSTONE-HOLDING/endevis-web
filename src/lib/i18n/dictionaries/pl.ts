@@ -32,6 +32,12 @@ const pl: Dictionary = {
       automation: "Automatyzacja procesów",
       cloud: "Platformy chmurowe",
     },
+    stats: {
+      ai: "Sztuczna inteligencja",
+      cloud: "Platformy chmurowe",
+      automation: "Automatyzacja biznesu",
+      workflow: "Inteligentne workflow",
+    },
   },
   products: {
     eyebrow: "Produkty",
@@ -42,9 +48,11 @@ const pl: Dictionary = {
     comingSoonDesc:
       "Nowe inteligentne aplikacje są w przygotowaniu. Nasza architektura umożliwia nieograniczoną ekspansję produktów.",
     learnMore: "Dowiedz się więcej",
+    visit: "Otwórz produkt",
     items: {
-      paperflow: {
+            paperflow: {
         title: "PaperFlow",
+        tagline: "AI zarządzanie dokumentami",
         description:
           "Platforma AI do zarządzania dokumentami, która digitalizuje, klasyfikuje i wydobywa informacje z dokumentów biznesowych na dużą skalę.",
         features: [
@@ -55,8 +63,9 @@ const pl: Dictionary = {
       },
       eventflow: {
         title: "EventFlow",
+        tagline: "AI planowanie wydarzeń",
         description:
-          "Nowoczesna platforma wydarzeń i rejestracji zapewniająca płynne doświadczenie uczestników — od zaproszenia po check-in.",
+          "Nowoczesna platforma wydarzeń i rejestracji z AI zapewniająca płynne doświadczenie uczestników — od zaproszenia po check-in.",
         features: [
           "Kompleksowe zarządzanie wydarzeniami",
           "Inteligentne procesy rejestracji",
@@ -65,12 +74,13 @@ const pl: Dictionary = {
       },
       feedflow: {
         title: "FeedFlow",
+        tagline: "AI przetwarzanie danych produktowych",
         description:
-          "Platforma AI do treści i publikacji, która usprawnia tworzenie, kurację i dystrybucję w wielu kanałach.",
+          "Platforma AI do przetwarzania danych produktowych, która usprawnia wzbogacanie, kurację i dystrybucję w wielu kanałach.",
         features: [
-          "Generowanie treści wspomagane AI",
-          "Publikacja wielokanałowa",
-          "Automatyzacja workflow redakcyjnego",
+          "Wzbogacanie danych wspomagane AI",
+          "Feedy produktowe wielokanałowe",
+          "Automatyzacja workflow katalogowego",
         ],
       },
     },
@@ -173,6 +183,8 @@ const pl: Dictionary = {
       "ENDEVIS tworzy nowoczesne rozwiązania programistyczne skoncentrowane na automatyzacji, sztucznej inteligencji i cyfrowej transformacji.",
     paragraph2:
       "Naszym celem jest upraszczanie złożonych procesów biznesowych poprzez inteligentne technologie — dostarczanie platform eleganckich, niezawodnych i gotowych do skalowania.",
+    companyLabel: "Firma",
+    registeredOffice: "Siedziba",
     stats: {
       products: { value: "3+", label: "Aktywne platformy" },
       focus: { value: "AI", label: "Kluczowa kompetencja" },
@@ -192,11 +204,13 @@ const pl: Dictionary = {
     registeredOffice: "Siedziba",
     sendMessage: "Wyślij wiadomość",
     getInTouch: "Skontaktuj się",
+    mapLabel: "Lokalizacja",
   },
   footer: {
     tagline: "Budujemy inteligentne oprogramowanie biznesowe dla Europy.",
     quickLinks: "Szybkie linki",
     products: "Produkty",
+    services: "Usługi",
     languages: "Języki",
     contact: "Kontakt",
     rights: "Wszelkie prawa zastrzeżone.",

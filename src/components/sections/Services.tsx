@@ -12,43 +12,20 @@ import {
 } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { IconBadge } from "@/components/ui/IconBadge";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Services({ dict }: { dict: Dictionary }) {
   const items = [
-    {
-      icon: Code2,
-      ...dict.services.items.customSoftware,
-    },
-    {
-      icon: Sparkles,
-      ...dict.services.items.artificialIntelligence,
-    },
-    {
-      icon: Zap,
-      ...dict.services.items.businessAutomation,
-    },
-    {
-      icon: Cloud,
-      ...dict.services.items.cloudSolutions,
-    },
-    {
-      icon: Network,
-      ...dict.services.items.apiIntegrations,
-    },
-    {
-      icon: Building2,
-      ...dict.services.items.enterpriseSystems,
-    },
-    {
-      icon: GitMerge,
-      ...dict.services.items.digitalTransformation,
-    },
-    {
-      icon: Workflow,
-      ...dict.services.items.workflowAutomation,
-    },
+    { icon: Code2, ...dict.services.items.customSoftware },
+    { icon: Sparkles, ...dict.services.items.artificialIntelligence },
+    { icon: Zap, ...dict.services.items.businessAutomation },
+    { icon: Cloud, ...dict.services.items.cloudSolutions },
+    { icon: Network, ...dict.services.items.apiIntegrations },
+    { icon: Building2, ...dict.services.items.enterpriseSystems },
+    { icon: GitMerge, ...dict.services.items.digitalTransformation },
+    { icon: Workflow, ...dict.services.items.workflowAutomation },
   ];
 
   return (
@@ -67,24 +44,19 @@ export function Services({ dict }: { dict: Dictionary }) {
         </Reveal>
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-          {items.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <Reveal key={item.title} delay={(index % 4) * 0.08} variant="up">
-                <GlassCard className="group h-full">
-                  <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-muted-bg text-gold transition-colors duration-300 group-hover:bg-gold/15">
-                    <Icon className="h-5 w-5" aria-hidden />
-                  </div>
-                  <h3 className="text-lg font-bold tracking-tight text-foreground">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">
-                    {item.description}
-                  </p>
-                </GlassCard>
-              </Reveal>
-            );
-          })}
+          {items.map((item, index) => (
+            <Reveal key={item.title} delay={(index % 4) * 0.08} variant="up">
+              <GlassCard className="group h-full" gradientBorder>
+                <IconBadge icon={item.icon} />
+                <h3 className="mt-5 text-lg font-bold tracking-tight text-foreground">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted">
+                  {item.description}
+                </p>
+              </GlassCard>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

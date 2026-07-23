@@ -27,6 +27,12 @@ export type Dictionary = {
       automation: string;
       cloud: string;
     };
+    stats: {
+      ai: string;
+      cloud: string;
+      automation: string;
+      workflow: string;
+    };
   };
   products: {
     eyebrow: string;
@@ -35,10 +41,26 @@ export type Dictionary = {
     comingSoon: string;
     comingSoonDesc: string;
     learnMore: string;
+    visit: string;
     items: {
-      paperflow: { title: string; description: string; features: string[] };
-      eventflow: { title: string; description: string; features: string[] };
-      feedflow: { title: string; description: string; features: string[] };
+      paperflow: {
+        title: string;
+        tagline: string;
+        description: string;
+        features: string[];
+      };
+      eventflow: {
+        title: string;
+        tagline: string;
+        description: string;
+        features: string[];
+      };
+      feedflow: {
+        title: string;
+        tagline: string;
+        description: string;
+        features: string[];
+      };
     };
   };
   services: {
@@ -75,6 +97,8 @@ export type Dictionary = {
     title: string;
     paragraph1: string;
     paragraph2: string;
+    companyLabel: string;
+    registeredOffice: string;
     stats: {
       products: { value: string; label: string };
       focus: { value: string; label: string };
@@ -93,11 +117,13 @@ export type Dictionary = {
     registeredOffice: string;
     sendMessage: string;
     getInTouch: string;
+    mapLabel: string;
   };
   footer: {
     tagline: string;
     quickLinks: string;
     products: string;
+    services: string;
     languages: string;
     contact: string;
     rights: string;

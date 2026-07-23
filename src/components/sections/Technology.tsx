@@ -10,9 +10,10 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n/dictionaries/types";
-import { GlassCard } from "@/components/ui/GlassCard";
+import { IconBadge } from "@/components/ui/IconBadge";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { cn } from "@/lib/utils";
 
 export function Technology({ dict }: { dict: Dictionary }) {
   const items = [
@@ -37,39 +38,68 @@ export function Technology({ dict }: { dict: Dictionary }) {
           />
         </Reveal>
 
-        <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {items.map((item, index) => {
-            const Icon = item.icon;
-            const isWide = index === items.length - 1;
-            return (
-              <Reveal
-                key={item.title}
-                delay={(index % 3) * 0.1}
-                variant="scale"
-                className={isWide ? "lg:col-span-3 lg:max-w-md lg:justify-self-center" : undefined}
-              >
-                <GlassCard className="group relative h-full overflow-hidden">
-                  <div
-                    aria-hidden
-                    className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-gold/10 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
-                  />
-                  <div className="relative flex items-start gap-4">
-                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-gold/20 bg-gold/10 text-gold">
-                      <Icon className="h-5 w-5" aria-hidden />
-                    </span>
-                    <div>
-                      <h3 className="text-lg font-bold tracking-tight text-foreground">
-                        {item.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted">
-                        {item.description}
-                      </p>
+        <div className="relative mx-auto mt-16 max-w-4xl">
+          <div
+            aria-hidden
+            className="absolute left-6 top-3 bottom-3 w-px bg-gradient-to-b from-gold via-gold/40 to-transparent md:left-1/2 md:-translate-x-px"
+          />
+
+          <ol className="space-y-8 md:space-y-12">
+            {items.map((item, index) => {
+              const Icon = item.icon;
+              const left = index % 2 === 0;
+              return (
+                <Reveal
+                  key={item.title}
+                  delay={(index % 3) * 0.08}
+                  variant={left ? "left" : "right"}
+                >
+                  <li
+                    className={cn(
+                      "relative grid gap-4 md:grid-cols-2 md:gap-10",
+                    )}
+                  >
+                    <div
+                      className={cn(
+                        "pl-16 md:pl-0",
+                        left ? "md:pr-12 md:text-right" : "md:col-start-2 md:pl-12",
+                      )}
+                    >
+                      <div
+                        className={cn(
+                          "glass gradient-border rounded-3xl p-6 text-left transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-28px_rgba(201,163,78,0.35)]",
+                          left && "md:ml-auto",
+                        )}
+                      >
+                        <div
+                          className={cn(
+                            "mb-4 flex items-center gap-3",
+                            left && "md:flex-row-reverse",
+                          )}
+                        >
+                          <IconBadge icon={Icon} size="sm" />
+                          <h3 className="text-lg font-bold tracking-tight text-foreground">
+                            {item.title}
+                          </h3>
+                        </div>
+                        <p className="text-sm leading-relaxed text-muted">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </GlassCard>
-              </Reveal>
-            );
-          })}
+
+                    <span
+                      aria-hidden
+                      className="absolute left-6 top-8 z-10 flex h-3 w-3 -translate-x-1/2 items-center justify-center md:left-1/2"
+                    >
+                      <span className="absolute h-3 w-3 rounded-full bg-gold shadow-[0_0_16px_rgba(201,163,78,0.8)]" />
+                      <span className="absolute h-6 w-6 animate-pulse-glow rounded-full border border-gold/40" />
+                    </span>
+                  </li>
+                </Reveal>
+              );
+            })}
+          </ol>
         </div>
       </div>
     </section>

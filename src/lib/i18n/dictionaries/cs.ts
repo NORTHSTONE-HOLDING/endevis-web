@@ -32,6 +32,12 @@ const cs: Dictionary = {
       automation: "Automatizace procesů",
       cloud: "Cloudové platformy",
     },
+    stats: {
+      ai: "Umělá inteligence",
+      cloud: "Cloudové platformy",
+      automation: "Automatizace podnikání",
+      workflow: "Inteligentní workflow",
+    },
   },
   products: {
     eyebrow: "Produkty",
@@ -42,9 +48,11 @@ const cs: Dictionary = {
     comingSoonDesc:
       "Nové inteligentní aplikace jsou ve vývoji. Naše architektura je připravena na nepřetržité rozšiřování produktů.",
     learnMore: "Zjistit více",
+    visit: "Otevřít produkt",
     items: {
-      paperflow: {
+            paperflow: {
         title: "PaperFlow",
+        tagline: "AI správa dokumentů",
         description:
           "Platforma pro správu dokumentů s AI, která digitalizuje, klasifikuje a vytěžuje informace z firemních dokumentů ve velkém měřítku.",
         features: [
@@ -55,8 +63,9 @@ const cs: Dictionary = {
       },
       eventflow: {
         title: "EventFlow",
+        tagline: "AI plánování událostí",
         description:
-          "Moderní platforma pro události a registrace zajišťující plynulý zážitek účastníků — od pozvánky po check-in.",
+          "Moderní platforma pro události a registrace s AI zajišťující plynulý zážitek účastníků — od pozvánky po check-in.",
         features: [
           "Kompletní správa událostí",
           "Chytré registrační toky",
@@ -65,12 +74,13 @@ const cs: Dictionary = {
       },
       feedflow: {
         title: "FeedFlow",
+        tagline: "AI zpracování produktových dat",
         description:
-          "Platforma pro obsah a publikování s AI, která zjednodušuje tvorbu, kurátorství a distribuci napříč kanály.",
+          "Platforma pro AI zpracování produktových dat, která zjednodušuje obohacování, kurátorství a distribuci napříč kanály.",
         features: [
-          "Generování obsahu s podporou AI",
-          "Publikování na více kanálech",
-          "Automatizace redakčních workflow",
+          "Obohacování dat s podporou AI",
+          "Produktové feedy na více kanálech",
+          "Automatizace katalogových workflow",
         ],
       },
     },
@@ -173,6 +183,8 @@ const cs: Dictionary = {
       "ENDEVIS vyvíjí moderní softwarová řešení zaměřená na automatizaci, umělou inteligenci a digitální transformaci.",
     paragraph2:
       "Naším cílem je zjednodušit složité obchodní procesy prostřednictvím inteligentních technologií — dodávat platformy, které jsou elegantní, spolehlivé a připravené na růst.",
+    companyLabel: "Společnost",
+    registeredOffice: "Sídlo",
     stats: {
       products: { value: "3+", label: "Aktivní platformy" },
       focus: { value: "AI", label: "Klíčová kompetence" },
@@ -192,11 +204,13 @@ const cs: Dictionary = {
     registeredOffice: "Sídlo",
     sendMessage: "Poslat zprávu",
     getInTouch: "Spojte se s námi",
+    mapLabel: "Lokalita",
   },
   footer: {
     tagline: "Budujeme inteligentní podnikový software pro Evropu.",
     quickLinks: "Rychlé odkazy",
     products: "Produkty",
+    services: "Služby",
     languages: "Jazyky",
     contact: "Kontakt",
     rights: "Všechna práva vyhrazena.",

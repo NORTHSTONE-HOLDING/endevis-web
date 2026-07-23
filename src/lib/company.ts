@@ -1,6 +1,6 @@
 /**
  * Company registration details.
- * Update these placeholders with official registry numbers when available.
+ * Update VAT EU placeholder with the official number when available.
  */
 export const company = {
   name: "ENDEVIS Sp. z o.o.",
@@ -19,38 +19,41 @@ export const company = {
     country: "Czech Republic",
     countryCode: "CZ",
   },
-  /** Edit these placeholders with official registry values */
   registration: {
-    nip: "XXXXXXXXXX",
-    krs: "0000000000",
-    regon: "000000000",
-    vatEu: "CZXXXXXXXXXX",
-    registeredOffice: "Školská 44, 250 69 Vodochody, Czech Republic",
+    nip: "5833204373",
+    krs: "0000619235",
+    regon: "364494052",
+    /** Edit this placeholder with the official VAT EU number */
+    vatEu: "PLXXXXXXXXXX",
+    registeredOffice: "Poland",
+    registeredOfficeFlag: "🇵🇱",
   },
   social: {
     linkedin: "https://linkedin.com/company/endevis",
     github: "https://github.com/endevis",
     email: "mailto:info@endevis.cz",
   },
+  mapEmbedUrl:
+    "https://www.openstreetmap.org/export/embed.html?bbox=14.38%2C50.26%2C14.48%2C50.32&layer=mapnik&marker=50.29%2C14.43",
 } as const;
 
 export const products = [
   {
     id: "paperflow",
     name: "PaperFlow",
-    accent: "from-amber-400/20 to-yellow-600/10",
+    href: "https://paperflow.cz",
     icon: "FileText",
   },
   {
     id: "eventflow",
     name: "EventFlow",
-    accent: "from-stone-400/20 to-amber-500/10",
+    href: "https://eventflow.cz",
     icon: "Calendar",
   },
   {
     id: "feedflow",
     name: "FeedFlow",
-    accent: "from-yellow-500/20 to-stone-500/10",
+    href: "https://feedflow.cz",
     icon: "Rss",
   },
 ] as const;

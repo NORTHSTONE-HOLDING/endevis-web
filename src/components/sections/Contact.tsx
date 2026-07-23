@@ -5,6 +5,7 @@ import type { Dictionary } from "@/lib/i18n/dictionaries/types";
 import { company } from "@/lib/company";
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { IconBadge } from "@/components/ui/IconBadge";
 import { Logo } from "@/components/ui/Logo";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -35,18 +36,6 @@ export function Contact({ dict }: { dict: Dictionary }) {
     },
   ];
 
-  const registry = [
-    { label: dict.contact.companyName, value: company.name },
-    {
-      label: dict.contact.registeredOffice,
-      value: company.registration.registeredOffice,
-    },
-    { label: "NIP", value: company.registration.nip },
-    { label: "KRS", value: company.registration.krs },
-    { label: "REGON", value: company.registration.regon },
-    { label: "VAT EU", value: company.registration.vatEu },
-  ];
-
   return (
     <section id="contact" className="relative scroll-mt-24 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -60,7 +49,7 @@ export function Contact({ dict }: { dict: Dictionary }) {
 
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
           <Reveal variant="left">
-            <GlassCard padding="lg" className="h-full">
+            <GlassCard padding="lg" gradientBorder className="h-full">
               <div className="flex items-center gap-4 border-b border-card-border pb-6">
                 <Logo showWordmark={false} size="lg" />
                 <div>
@@ -71,14 +60,11 @@ export function Contact({ dict }: { dict: Dictionary }) {
                 </div>
               </div>
 
-              <dl className="mt-8 space-y-6">
+              <dl className="mt-8 space-y-5">
                 {details.map((item) => {
-                  const Icon = item.icon;
                   const content = (
                     <div className="flex gap-4">
-                      <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gold/10 text-gold">
-                        <Icon className="h-5 w-5" aria-hidden />
-                      </span>
+                      <IconBadge icon={item.icon} size="sm" />
                       <div>
                         <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                           {item.label}
@@ -117,28 +103,28 @@ export function Contact({ dict }: { dict: Dictionary }) {
           </Reveal>
 
           <Reveal variant="right" delay={0.12}>
-            <GlassCard padding="lg" className="h-full">
-              <h3 className="text-lg font-bold tracking-tight text-foreground">
-                {dict.contact.getInTouch}
-              </h3>
-              <p className="mt-2 text-sm text-muted">
-                {company.registration.registeredOffice}
-              </p>
-
-              <div className="mt-8 space-y-4">
-                {registry.map((row) => (
-                  <div
-                    key={row.label}
-                    className="flex flex-col gap-1 rounded-2xl border border-card-border bg-background/40 px-4 py-3 sm:flex-row sm:items-center sm:justify-between"
-                  >
-                    <span className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                      {row.label}
-                    </span>
-                    <span className="text-sm font-medium text-foreground sm:text-right">
-                      {row.value}
-                    </span>
-                  </div>
-                ))}
+            <GlassCard padding="none" gradientBorder className="h-full overflow-hidden">
+              <div className="border-b border-card-border px-6 py-5 md:px-8">
+                <h3 className="text-lg font-bold tracking-tight text-foreground">
+                  {dict.contact.mapLabel}
+                </h3>
+                <p className="mt-1 text-sm text-muted">
+                  {company.address.street}, {company.address.postalCode}{" "}
+                  {company.address.city}
+                </p>
+              </div>
+              <div className="relative min-h-[320px] bg-anthracite-soft md:min-h-[420px]">
+                <iframe
+                  title={dict.contact.mapLabel}
+                  src={company.mapEmbedUrl}
+                  className="absolute inset-0 h-full w-full border-0 opacity-90 grayscale-[0.25] contrast-[1.05]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent"
+                />
               </div>
             </GlassCard>
           </Reveal>
